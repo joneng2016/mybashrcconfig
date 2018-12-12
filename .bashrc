@@ -135,7 +135,8 @@ basicInstall()
     echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
     apt-get -y update
     apt-get install -y sublime-text
-    apt-get install lynx
+    apt-get install -y lynx
+    apt-get install -y evince
 }
 createPhpClass()
 {
