@@ -141,6 +141,7 @@ basicInstall()
     curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpgmv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
     apt-get update
     apt-get install code
+    apt-get instal abntex	
 }
 createPhpClass()
 {
