@@ -98,23 +98,26 @@ fi
 #    . /etc/bash_completion
 #fi
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-export VISUAL=vim
+
+#Alternar para o PHP 5.6
+alias tophp56='sudo update-alternatives --set php /usr/bin/php5.6 && sudo /etc/init.d/php5.6-fpm restart && sudo /etc/init.d/nginx restart'
+#Alternar para o PHP 7.0
+alias tophp70='sudo update-alternatives --set php /usr/bin/php7.0 && sudo /etc/init.d/php7.0-fpm restart && sudo /etc/init.d/nginx restart'
+#Alternar para o PHP 7.4
+alias tophp74='sudo update-alternatives --set php /usr/bin/php7.4 && sudo /etc/init.d/php7.4-fpm restart && sudo /etc/init.d/nginx restart'
+
+alias code_root='code . --user-data-dir --no-sandbox'
+alias code_root_vebose='code . --user-data-dir --no-sandbox --verbose'
+alias artisan='php artisan'
 
 
-echo "ROOT ACCESS :: From Jonathan \n"
-
-cloudfree()
-{
-    cd /project/cloudfree-API
-}
-
-artisan()
-{
-    php artisan
-}
 basicInstall()
 {
+
     apt-get install -y update
     apt-get install -y upgrade
     apt-get install -y vim
@@ -141,8 +144,10 @@ basicInstall()
     curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpgmv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
     apt-get update
     apt-get install code
-    apt-get instal abntex	
+    apt-get instal abntex
+    	
 }
+
 createPhpClass()
 {
     name=$1
