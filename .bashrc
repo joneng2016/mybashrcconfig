@@ -113,7 +113,8 @@ alias tophp74='sudo update-alternatives --set php /usr/bin/php7.4 && sudo /etc/i
 alias code_root='code . --user-data-dir --no-sandbox'
 alias code_root_vebose='code . --user-data-dir --no-sandbox --verbose'
 alias artisan='php artisan'
-
+alias aws_simulation='docker run --rm -it -p 4566:4566 -p 4571:4571 localstack/localstack
+aws sqs create-queue --endpoint http://localhost:4566 --queue-name loyalty-events-integration'
 
 basicInstall()
 {
