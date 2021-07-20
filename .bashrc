@@ -133,7 +133,7 @@ alias artisan='php artisan'
 alias aws_simulation='docker run --rm -it -p 4566:4566 -p 4571:4571 localstack/localstack'
 alias aws_create_queu='aws sqs create-queue --endpoint http://localhost:4566 --queue-name loyalty-events-integration'
 alias idea_j_brains='sh /home/jonathan.samara/ideaIC-2021.1.2/idea-IC-211.7442.40/bin/idea.sh'
-
+alias restart_go_main='killall -9 go; go run main.go &' 
 
 basicInstall()
 {
