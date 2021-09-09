@@ -161,3 +161,8 @@ createPhpClass()
     echo "<?php\n namespace \n use \n \n class{ \n \n } " $name."php"
 }
 
+kill_all_port()
+{
+    port=$1
+    kill -9 $(sudo lsof -t -i:$port)
+}
