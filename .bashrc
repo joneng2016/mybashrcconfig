@@ -119,6 +119,8 @@ alias restart_go_main='killall -9 go; go run main.go &'
 alias awslocal='aws --endpoint-url=http://localhost:4566'
 alias aws_build_bucket='awslocal s3 mb'
 alias zero_cd='cd; cd -;'
+alias phpcs="php5.6 /opt/PHP_CodeSniffer/bin/phpcs"
+
 
 basicInstall()
 {
